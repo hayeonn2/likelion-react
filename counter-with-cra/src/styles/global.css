@@ -1,0 +1,10 @@
+abbr[title] {
+  cursor: help;
+}
+
+/* 콘솔, 프린트 모드에서 커맨드 쉬프트 피 볼수있다. (접근성) */
+@media print {
+  abbr[title]::after {
+    content: " (" attr(title) ") ";
+  }
+}

@@ -9,7 +9,7 @@ import { createRoot } from "react-dom/client";
 
 // CSS 모듈로 네이밍할 때 스트레스 덜 받는다.
 import "./styles/global.css";
-import App from "./App";
+import App from "./app/App";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
