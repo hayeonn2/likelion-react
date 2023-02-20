@@ -1,7 +1,8 @@
 import { Component } from "react";
 
 class Counter extends Component {
-  static defaultPops = {
+  // 생성이라는 과정없이 쓸 수 있는 것 (프로토타입 아님)
+  static defaultProps = {
     count: 1,
     min: 1,
     max: 10,
@@ -12,6 +13,7 @@ class Counter extends Component {
     count: this.props.count,
   };
 
+  // 프로토타입임.
   render() {
     const { count } = this.state;
     return (
@@ -48,5 +50,12 @@ class Counter extends Component {
     });
   };
 }
+
+// Counter.defaultProps
+// 클래스.속성(또는 메서드)
+
+// Counter.prototype.render
+// 인스턴스 메서드
+// new 클래스().render()
 
 export default Counter;
