@@ -1,15 +1,38 @@
-import classes from './Button.module.css';
+import classes from "./Button.module.css";
+import { tokens } from "@/theme/tokens";
+import { getColor } from "@/theme/utils";
 
-export function EuidButton({ mode, children, ...restProps }) {
+const { colors } = tokens;
+
+export function Button({
+  mode,
+  secondary: isSecondary,
+  disabled,
+  ...restProps
+}) {
+  // 함수 컴포넌트 지역 내에 사용하는 함수
+  // 프롭스로부터 파생된 지역 변수 (derived) 렌더링과는 아무 상관 없음
+  //let isPrimary = !secondary;
+
   return (
-    <button type="button" className={classes.component} {...restProps}>
-      {children}
-    </button>
+    <button
+      type="button"
+      className={classes.component}
+      style={{
+        backgroundColor: !isSecondary
+          ? getColor("primary/500")
+          : getColor("primary/50"),
+        colors: !isSecondary ? getColor("white") : getColor("primary/400"),
+      }}
+      {...restProps}
+    />
   );
 }
 
-EuidButton.defaultProps = {
-  mode: 'primary', // 'secondary'
+Button.defaultProps = {
+  mode: "primary", // 'secondary'
+  secondary: false,
+  disabled: false,
 };
 
 /* -------------------------------------------------------------------------- */
