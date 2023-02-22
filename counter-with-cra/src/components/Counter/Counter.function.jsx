@@ -1,4 +1,10 @@
 import { useState } from "react"; // node-modules에서 빼오는 것
+// imn : import no module
+//import "./Counter.style.css";
+
+//imd : import destructing
+// imp 로 받을 수 있다.
+import styles from "./Counter.module.css";
 
 function Counter(props) {
   //함수 안에 지역 변수 선언 (리액트는 지역변수가 바뀐다해서 업데이트가 되는게 아니다.)
@@ -30,7 +36,7 @@ function Counter(props) {
     setCount(count - props.step);
   };
   return (
-    <div className="Counter">
+    <div className={styles.container}>
       <button type="button" onClick={handlerIncrement}>
         +
       </button>

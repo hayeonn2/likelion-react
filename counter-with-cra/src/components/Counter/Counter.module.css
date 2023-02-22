@@ -1,0 +1,17 @@
+/* 데이터 접두사를 쓰면 다른 css 클래스랑 충돌을 막기 쉽다. */
+/* 만약 클래스를 쓰면 .Class로 쓰긴 하면 됨 (회사에 맞춰서 쓰기) jsx파일에서 className으로 줄 것 */
+/* 근데 css 모듈을 활용할 수 있다. */
+/* [data-component="Counter"] {
+  display: inline-flex;
+  justify-content: center;
+  gap: 8px;
+  min-width: 200px;
+} */
+
+/* 다른데서도 container를 쓸 수 있다. */
+.container {
+  display: inline-flex;
+  justify-content: center;
+  gap: 8px;
+  min-width: 200px;
+}

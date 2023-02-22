@@ -1,5 +1,5 @@
 import "./App.css";
-import { CounterFunction, CounterClass } from "../components";
+import { CounterFunction, CounterClass } from "../components"; // 컴포넌트라는 엔트리들에서 받아온다.
 
 function App() {
   return (

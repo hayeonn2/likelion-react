@@ -17,7 +17,7 @@ class Counter extends Component {
   render() {
     const { count } = this.state;
     return (
-      <div data-Component="Counter">
+      <div className="Counter">
         <button
           type="button"
           onClick={this.handleInc}
