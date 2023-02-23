@@ -1,5 +1,5 @@
 import classes from "./App.module.css";
-import { Button, A11yHidden, Nav } from "./components";
+import { Button, A11yHidden, Nav } from "@/components";
 
 function App() {
   const handleClick = (e) => {
@@ -8,7 +8,16 @@ function App() {
 
   return (
     <div className={classes.container}>
-      <Nav />
+      <Nav
+        as="h3"
+        headline="상품목록"
+        list={[
+          { text: "과자" },
+          { text: "수박" },
+          { text: "아이스크림" },
+          { text: "초콜릿" },
+        ]}
+      />
 
       <h2 className={classes.headline}>Button 컴포넌트(stateless)</h2>
       <div role="group" className={classes.buttonGroup}>
