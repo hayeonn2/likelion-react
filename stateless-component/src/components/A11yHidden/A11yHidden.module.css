@@ -13,6 +13,7 @@ caption.srOnly {
   position: static;
 }
 
+/* 초점 이동이 되면 모든걸 초기화 시켜준다. */
 .focusable:focus {
   visibility: initial;
   position: static;

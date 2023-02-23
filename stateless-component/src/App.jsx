@@ -1,5 +1,5 @@
 import classes from "./App.module.css";
-import { Button, A11yHidden } from "./components";
+import { Button, A11yHidden, Nav } from "./components";
 
 function App() {
   const handleClick = (e) => {
@@ -8,6 +8,8 @@ function App() {
 
   return (
     <div className={classes.container}>
+      <Nav />
+
       <h2 className={classes.headline}>Button 컴포넌트(stateless)</h2>
       <div role="group" className={classes.buttonGroup}>
         <Button>회원가입</Button>
@@ -16,14 +18,16 @@ function App() {
         재사용성을 높여 작업이 가능하다.*/}
       </div>
       <section>
-        <A11yHidden as="h2" className="myClassName">
+        <A11yHidden as="h2" focusable>
           접근성 준수한 제목
         </A11yHidden>
         <p>
-          Lorem Ipsum is simply <a href="">dummy</a> text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book.
+          <A11yHidden as="a" href="#invisible" focusable>
+            Lorem Ipsum is simply
+          </A11yHidden>{" "}
+          <a href="#dolor">dummy</a> text of the printing and dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
         </p>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
